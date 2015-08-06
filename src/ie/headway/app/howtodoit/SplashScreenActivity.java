@@ -13,7 +13,7 @@ public class SplashScreenActivity extends Activity {
 		super.onCreate(savedInstanceBundle);
 		setContentView(R.layout.activity_splash_screen);
 		makeAppDirs();
-		exitSplashScreen(500);
+		exitSplashScreen(5000);
 	}
 	
 	private void exitSplashScreen(long delay) {

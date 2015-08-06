@@ -1,0 +1,23 @@
+<task name="Make Coffee">
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/1.jpg" text="Go the kitchen."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/2.jpg" text="Go to the press under the microwave."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/3.jpg" text="Open the press."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/4.jpg" text="Take a mug."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/5.jpg" text="Put it on the counter behind you."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/6.jpg" text="Go back to the press for the coffee."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/7.jpg" text="Put the coffee on the counter behind you next to the cup."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/8.jpg" text="Take the lid off the coffee jar."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/9.jpg" text="Go over to the sink."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/10.jpg" text="Go to the drawer on the top right under the sink."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/11.jpg" text="Open the drawer."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/12.jpg" text="Take a spoon."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/13.jpg" text="Put a spoon of coffee in to the mug."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/14.jpg" text=""/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/16.jpg" text="Put the mug under the hot water tap."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/17.jpg" text="Put your hand on the lever and pull it towards you until the cup is three quarters full."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/19.jpg" text="Stir the coffee with the spoon."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/20.jpg" text="Add milk from the milk machine."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/21.jpg" text="Stri the coffee again."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/22.jpg" text="Put the lid back on the coffee."/>
+   <step audioPath="" imagePath="/storage/emulated/0/Headway/MakeCoffee/imgs/23.jpg" text="Drink the coffee!"/>
+</task>

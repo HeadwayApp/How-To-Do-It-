@@ -25,28 +25,28 @@ public class StepLayout extends Fragment implements Viewable {
 
 	private final Step mStep;
 	
-	private final LinearLayout mLayout;
+	private final LinearLayout mView;
 	private final TextView mText;
 	private final ImageView mImage;
 
 	public StepLayout(Context context, Step step) {
 		mStep = step;
 		
-		mLayout = new LinearLayout(context);
-		mLayout.setOrientation(VERTICAL);
+		mView = new LinearLayout(context);
+		mView.setOrientation(VERTICAL);
 
 		mText = new TextView(context);
 		mText.setText(step.getText());
 		mText.setTextSize(COMPLEX_UNIT_SP, 25);
 		mText.setGravity(CENTER);
 		mText.setLayoutParams(new LayoutParams(MATCH_PARENT, WRAP_CONTENT));
-		mLayout.addView(mText);
+		mView.addView(mText);
 
 		mImage = new ImageView(context);
 		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
 		mImage.setImageURI(
 				new Uri.Builder().path(step.getImagePath()).build());
-		mLayout.addView(mImage);
+		mView.addView(mImage);
 	}
 
 	@Override
@@ -58,12 +58,12 @@ public class StepLayout extends Fragment implements Viewable {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return getLayout();
+		return getView();
 	}
 
 	@Override
-	public View getLayout() {
-		return mLayout;
+	public View getView() {
+		return mView;
 	}
 	
 	@Override

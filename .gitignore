@@ -20,5 +20,6 @@ ign/
 
 # Local configuration file (sdk path, etc)
 local.properties
+.factorypath
 .classpath
 .project

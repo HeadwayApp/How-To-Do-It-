@@ -23,32 +23,36 @@ import android.widget.TextView;
 
 public class StepLayout extends Fragment implements Layoutable<LinearLayout> {
 
+	private final Step mStep;
+	
 	private final LinearLayout mLayout;
-	private final TextView text;
-	private final ImageView image;
+	private final TextView mText;
+	private final ImageView mImage;
 
 	public StepLayout(Context context, Step step) {
+		mStep = step;
+		
 		mLayout = new LinearLayout(context);
 		mLayout.setOrientation(VERTICAL);
 
-		text = new TextView(context);
-		text.setText(step.getText());
-		text.setTextSize(COMPLEX_UNIT_SP, 65);
-		text.setGravity(CENTER);
-		text.setLayoutParams(new LayoutParams(MATCH_PARENT, WRAP_CONTENT));
-		mLayout.addView(text);
+		mText = new TextView(context);
+		mText.setText(step.getText());
+		mText.setTextSize(COMPLEX_UNIT_SP, 25);
+		mText.setGravity(CENTER);
+		mText.setLayoutParams(new LayoutParams(MATCH_PARENT, WRAP_CONTENT));
+		mLayout.addView(mText);
 
-		image = new ImageView(context);
-		image.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
-		image.setImageURI(
+		mImage = new ImageView(context);
+		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
+		mImage.setImageURI(
 				new Uri.Builder().path(step.getImagePath()).build());
-		mLayout.addView(image);
+		mLayout.addView(mImage);
 	}
 
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		image.setPadding(0, 0, 0, px2Dp(15));
+		mImage.setPadding(0, 0, 0, px2Dp(15));
 	}
 	
 	@Override
@@ -60,6 +64,11 @@ public class StepLayout extends Fragment implements Layoutable<LinearLayout> {
 	@Override
 	public LinearLayout getLayout() {
 		return mLayout;
+	}
+	
+	@Override
+	public String toString() {
+		return "Step = " + mStep;
 	}
 	
 	private int px2Dp(int dp) {

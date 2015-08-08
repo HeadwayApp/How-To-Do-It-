@@ -27,7 +27,7 @@ public class TaskBreakdownActivity extends FragmentActivity {
 		super.onCreate(savedInstanceBundle);		
 		setContentView(R.layout.activity_task_breakdown);
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+        mPagerAdapter = new TaskBreakdownAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 	}
 
@@ -43,18 +43,17 @@ public class TaskBreakdownActivity extends FragmentActivity {
         }
     }
 
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+    private class TaskBreakdownAdapter extends FragmentStatePagerAdapter {
     	
     	final File taskDir = ROOT.getFile(getIntent().getCharSequenceExtra("TASK"));
     	final File taskFile = new File(taskDir, "task.xml");
     	
-        public ScreenSlidePagerAdapter(FragmentManager fm) {
+        public TaskBreakdownAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
-        	
     		final Serializer serializer = new Persister();
     
     		Task makeTeaTask;

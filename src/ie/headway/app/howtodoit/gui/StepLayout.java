@@ -21,7 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-public class StepLayout extends Fragment implements Layoutable<LinearLayout> {
+public class StepLayout extends Fragment implements Viewable {
 
 	private final Step mStep;
 	
@@ -62,7 +62,7 @@ public class StepLayout extends Fragment implements Layoutable<LinearLayout> {
 	}
 
 	@Override
-	public LinearLayout getLayout() {
+	public View getLayout() {
 		return mLayout;
 	}
 	

@@ -1,5 +1,7 @@
 package ie.headway.app.howtodoit.xml;
 
+import java.io.File;
+
 import org.simpleframework.xml.Attribute;
 
 public class Step {
@@ -28,6 +30,11 @@ public class Step {
 	
 	public String getAudioPath() {
 		return audioPath;
+	}
+	
+	@Override
+	public String toString() {
+		return text + " : " + new File(imagePath).getName() + " : " + new File(audioPath).getName();
 	}
 	
 }

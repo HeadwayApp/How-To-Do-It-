@@ -5,13 +5,19 @@ import static android.view.Gravity.CENTER;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
-import ie.headway.app.howtodoit.xml.Step;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import ie.headway.app.howtodoit.xml.Step;
 
 public class StepLayout extends Fragment implements Viewable {
 
@@ -44,8 +51,20 @@ public class StepLayout extends Fragment implements Viewable {
 
 		mImage = new ImageView(context);
 		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
-		mImage.setImageURI(
-				new Uri.Builder().path(step.getImagePath()).build());
+//		mImage.setImageURI(
+//				new Uri.Builder().path(step.getPortableImagePath()).build());
+		
+		/**
+		 * TODO: The sample size should be setable with the advanced options in the companion app.
+		 * Perhaps the device RAM or the XML could give an indication of what inSampleSize should be
+		 * set to.
+		 * */
+		final BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inSampleSize = 4;
+		
+		final Bitmap bitmap  = BitmapFactory.decodeFile(step.getPortableImagePath(), options);
+		mImage.setImageBitmap(bitmap);
+		
 		mView.addView(mImage);
 	}
 

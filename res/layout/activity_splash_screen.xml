@@ -10,6 +10,6 @@
 		android:layout_height="wrap_content"
 		android:src="@drawable/headway"
 		android:layout_gravity="center"
-		android:contentDescription="@string/splash_content_description" /> 
+		android:contentDescription="@string/splash_content_description" />
 	
 </FrameLayout>

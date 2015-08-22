@@ -9,14 +9,19 @@ import android.os.Handler;
 public class SplashScreenActivity extends Activity {
 
 	@Override
-	public void onCreate(Bundle savedInstanceBundle) {
+	public void onCreate(final Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);
 		setContentView(R.layout.activity_splash_screen);
 		makeAppDirs();
 		exitSplashScreen(5000);
 	}
 	
-	private void exitSplashScreen(long delay) {
+	/**
+	 * TODO Inspect this method to see if it can be improved,
+	 * or if a more efficient approarch can be taken. This code
+	 * was copy-pasta from stackOverflow and I don't know how it works.
+	 * */
+	private void exitSplashScreen(final long delay) {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {

@@ -1,8 +1,6 @@
 package ie.headway.app.howtodoit;
 
 import static ie.headway.app.howtodoit.disk.AppDir.ROOT;
-import ie.headway.app.howtodoit.gui.StepLayout;
-import ie.headway.app.howtodoit.xml.Task;
 
 import java.io.File;
 
@@ -16,6 +14,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import ie.headway.app.howtodoit.gui.StepLayout;
+import ie.headway.app.howtodoit.xml.Task;
 
 public class TaskBreakdownActivity extends FragmentActivity {
     
@@ -63,7 +63,7 @@ public class TaskBreakdownActivity extends FragmentActivity {
     			throw new RuntimeException("Deserialization failed!", e);
     		}
     		
-    		return new StepLayout(getApplicationContext(), makeTeaTask.getStep(position).getPortableStep());
+    		return new StepLayout(getApplicationContext(), makeTeaTask.getStep(position));
         }
 
         /**

@@ -21,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import ie.headway.app.howtodoit.xml.PortableStep;
 import ie.headway.app.howtodoit.xml.Step;
 
 public class StepLayout extends Fragment implements Viewable {
@@ -32,7 +31,7 @@ public class StepLayout extends Fragment implements Viewable {
 	private final TextView mText;
 	private final ImageView mImage;
 
-	public StepLayout(Context context, PortableStep step) {
+	public StepLayout(Context context, Step step) {
 		mStep = step;
 		
 		mView = new LinearLayout(context);

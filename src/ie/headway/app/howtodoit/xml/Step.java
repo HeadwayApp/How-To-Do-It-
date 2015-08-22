@@ -37,8 +37,4 @@ public class Step {
 		return text + " : " + new File(imagePath).getName() + " : " + new File(audioPath).getName();
 	}
 
-	public PortableStep getPortableStep() {
-		return new PortableStep(this);
-	}
-
 }

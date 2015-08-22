@@ -8,23 +8,29 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TaskSelectionActivity extends ListActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_selection);
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.task_list_item);
-        adapter.addAll(ROOT.getFile().list());
-        setListAdapter(adapter);
-    }
+	@Override
+	protected void onCreate(final Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_task_selection);
+		final ArrayAdapter<String> adapter = 
+				new ArrayAdapter<String>(getBaseContext(), R.layout.task_list_item);
+		adapter.addAll(ROOT.getFile().list());
+		setListAdapter(adapter);
+	}
 
 	@Override
-	protected void onListItemClick (ListView l, View v, int position, long id) {
+	protected void onListItemClick (final ListView l, final View v, final int pos, final long id) {
 		final Intent intent = new Intent(getApplicationContext(), TaskBreakdownActivity.class);
-		intent.putExtra("TASK", ((TextView)v).getText());
-		startActivity(intent);
+		if(v instanceof TextView) {
+			intent.putExtra("TASK", ((TextView)v).getText());
+			startActivity(intent);
+		}else {
+			Toast.makeText(getBaseContext(), R.string.cant_start_task, Toast.LENGTH_LONG).show();
+		}
 	}
 
 }

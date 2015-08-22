@@ -4,8 +4,6 @@ import java.io.File;
 
 import org.simpleframework.xml.Attribute;
 
-import android.os.Environment;
-
 public class Step {
 
 	@Attribute private String text;
@@ -30,14 +28,6 @@ public class Step {
 		return imagePath;
 	}
 
-	/**
-	 * @debug Remove
-	 * */
-	public String getPortableImagePath() {
-		return Environment.getExternalStorageDirectory() + File.separator + 
-				"Headway" + File.separator + imagePath.split("Headway")[1];
-	}
-
 	public String getAudioPath() {
 		return audioPath;
 	}
@@ -45,6 +35,10 @@ public class Step {
 	@Override
 	public String toString() {
 		return text + " : " + new File(imagePath).getName() + " : " + new File(audioPath).getName();
+	}
+
+	public PortableStep getPortableStep() {
+		return new PortableStep(this);
 	}
 
 }

@@ -6,18 +6,13 @@ import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import ie.headway.app.howtodoit.xml.PortableStep;
 import ie.headway.app.howtodoit.xml.Step;
 
 public class StepLayout extends Fragment implements Viewable {
@@ -36,7 +32,7 @@ public class StepLayout extends Fragment implements Viewable {
 	private final TextView mText;
 	private final ImageView mImage;
 
-	public StepLayout(Context context, Step step) {
+	public StepLayout(Context context, PortableStep step) {
 		mStep = step;
 		
 		mView = new LinearLayout(context);
@@ -51,8 +47,6 @@ public class StepLayout extends Fragment implements Viewable {
 
 		mImage = new ImageView(context);
 		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
-//		mImage.setImageURI(
-//				new Uri.Builder().path(step.getPortableImagePath()).build());
 		
 		/**
 		 * TODO: The sample size should be setable with the advanced options in the companion app.
@@ -62,7 +56,7 @@ public class StepLayout extends Fragment implements Viewable {
 		final BitmapFactory.Options options = new BitmapFactory.Options();
 		options.inSampleSize = 4;
 		
-		final Bitmap bitmap  = BitmapFactory.decodeFile(step.getPortableImagePath(), options);
+		final Bitmap bitmap  = BitmapFactory.decodeFile(step.getImagePath(), options);
 		mImage.setImageBitmap(bitmap);
 		
 		mView.addView(mImage);

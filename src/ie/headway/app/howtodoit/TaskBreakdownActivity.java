@@ -23,7 +23,7 @@ public class TaskBreakdownActivity extends FragmentActivity {
     private PagerAdapter mPagerAdapter;
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceBundle) {
+	protected void onCreate(final Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);		
 		setContentView(R.layout.activity_task_breakdown);
         mPager = (ViewPager) findViewById(R.id.pager);
@@ -48,12 +48,12 @@ public class TaskBreakdownActivity extends FragmentActivity {
     	final File taskDir = ROOT.getFile(getIntent().getCharSequenceExtra("TASK"));
     	final File taskFile = new File(taskDir, "task.xml");
     	
-        public TaskBreakdownAdapter(FragmentManager fm) {
+        public TaskBreakdownAdapter(final FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public Fragment getItem(int position) {
+        public Fragment getItem(final int position) {
     		final Serializer serializer = new Persister();
     
     		Task makeTeaTask;
@@ -63,9 +63,12 @@ public class TaskBreakdownActivity extends FragmentActivity {
     			throw new RuntimeException("Deserialization failed!", e);
     		}
     		
-    		return new StepLayout(getApplicationContext(), makeTeaTask.getStep(position));
+    		return new StepLayout(getApplicationContext(), makeTeaTask.getStep(position).getPortableStep());
         }
 
+        /**
+         * TODO This can cause crashes if there are unused images in the imgs directory.
+         * */
         @Override
         public int getCount() {
             return new File(taskDir, "imgs").list().length - 1;

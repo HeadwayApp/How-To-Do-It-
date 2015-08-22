@@ -9,45 +9,45 @@ public enum AppDir {
 	ROOT(Environment.getExternalStorageDirectory() + File.separator + "Headway");
 	
 	private final String mPath;
-	private final File mFile;
 	
 	private AppDir(String path) {
 		mPath = path;
-		mFile = new File(path);
 	}
 	
-	public String getPath() {
-		return mPath;
-	}
-	
-	public String getPath(String child) {
-		return mPath + File.separator + child;
-	}
-	
-	public String getPath(String... children) {
+	/**
+	 * Returns a path with this AppDir as the parent to all the specified {@code children}, 
+	 * e.g ROOT.getPath("tmp", "64") would return a path ROOT/tmp/64, where ROOT is itself a path.
+	 * 
+	 * @param children The child directories of the current AppDir.
+	 * @return The path.
+	 * */
+	public String getPath(CharSequence... children) {
 		final StringBuilder pathBuilder = new StringBuilder(mPath);
-		for(String child: children) {
+		for(CharSequence child: children) {
 			pathBuilder.append(File.separator + child);
 		}
 		return pathBuilder.toString();
 	}
 	
-	public File getFile() {
-		return mFile;
-	}
-	
+	/**
+	 * Returns a file with this AppDir as the parent to all the specified {@code children}, 
+	 * e.g ROOT.getFile("tmp", "64") would return a file representing the path ROOT/tmp/64,
+	 * where ROOT does itself represent a path.
+	 * 
+	 * @param children The child directories of the current AppDir.
+	 * @return The file representing the new path.
+	 * */
 	public File getFile(CharSequence... children) {
-		File returnFile = mFile;
-		for(CharSequence child: children) {
-			returnFile = new File(returnFile, child.toString());
-		}
-		return returnFile;
+		return new File(getPath(children));
 	}
 	
+	/**
+	 * Create any directories required by the app which do not currently exist.
+	 * */
 	public static void makeAppDirs() {
-		for(AppDir appDir: values()) {
+		for(final AppDir appDir: values()) {
 			if(!appDir.getFile().exists()) {
-				if(!appDir.getFile().mkdirs()) {
+				if(!appDir.getFile().mkdirs()) {	//mkdirs doesn't throw anything if it fails.
 					throw new RuntimeException("Couldn't create " + appDir.getFile());
 				}
 			}

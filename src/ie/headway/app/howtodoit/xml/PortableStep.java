@@ -10,13 +10,16 @@ public class PortableStep extends Step {
 	 * This constant represents the system dependant path element which PortableStep will resolve.
 	 * */
 	public static final String PORTABLE_PATH_PARENT = "EXTERNAL_STORAGE_DIRECTORY";
-
+	
 	public PortableStep() {
 		
 	}
 	
-	PortableStep(Step step) {
-		super(step.getText(), step.getImagePath(), step.getAudioPath());
+	/**
+	 * @debug remove
+	 * */
+	public PortableStep(String text, String imagePath, String audioPath) {
+		super(text, imagePath, audioPath);
 	}
 	
 	/**

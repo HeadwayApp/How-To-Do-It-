@@ -4,13 +4,18 @@ import java.util.List;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.ElementListUnion;
 import org.simpleframework.xml.Root;
 
 @Root
 public class Task {
 
 	@Attribute private String name;
-	@ElementList(inline=true) private List<Step> steps;
+    @ElementListUnion({
+        @ElementList(entry="step", inline=true, type=Step.class),
+        @ElementList(entry="portable_step", inline=true, type=PortableStep.class)               
+    })
+	private List<Step> steps;
 	
 	public Task() {
 		

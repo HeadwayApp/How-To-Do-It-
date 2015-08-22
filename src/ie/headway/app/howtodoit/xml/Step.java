@@ -10,16 +10,6 @@ public class Step {
 	@Attribute private String imagePath;
 	@Attribute private String audioPath;
 
-	public Step() {
-
-	}
-
-	public Step(String text, String imagePath, String audioPath) {
-		this.text = text;
-		this.imagePath = imagePath;
-		this.audioPath = audioPath;
-	}
-
 	public String getText() {
 		return text;
 	}

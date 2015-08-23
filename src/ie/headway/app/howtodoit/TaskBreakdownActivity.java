@@ -15,7 +15,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import ie.headway.app.howtodoit.gui.StepLayoutFragment;
-import ie.headway.app.howtodoit.xml.Task;
+import ie.headway.app.xml.Task;
 
 public class TaskBreakdownActivity extends FragmentActivity {
     

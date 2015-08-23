@@ -7,7 +7,6 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.LinearLayout.VERTICAL;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,29 +22,44 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import ie.headway.app.howtodoit.xml.Step;
 
-public class StepLayout extends Fragment implements Viewable {
+public class StepLayoutFragment extends Fragment {
 
-	private final Step mStep;
+	private static final String STEP_KEY = "STEP";
+
+	private Step mStep;
 	
-	private final LinearLayout mView;
-	private final TextView mText;
-	private final ImageView mImage;
+	private LinearLayout mView;
+	private TextView mText;
+	private ImageView mImage;
 
-	public StepLayout(Context context, Step step) {
-		mStep = step;
+	public static final StepLayoutFragment newInstance(Step step) {
+		final StepLayoutFragment stepLayoutFragment = new StepLayoutFragment();
+		final Bundle argsBundle = new Bundle(1);
+		argsBundle.putParcelable(STEP_KEY, step);
+		stepLayoutFragment.setArguments(argsBundle);
 		
-		mView = new LinearLayout(context);
+		return stepLayoutFragment;
+	}
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		mStep = getArguments().getParcelable(STEP_KEY);
+		
+		mView = new LinearLayout(getActivity().getBaseContext());
 		mView.setOrientation(VERTICAL);
 
-		mText = new TextView(context);
-		mText.setText(step.getText());
+		mText = new TextView(getActivity().getBaseContext());
+		mText.setText(mStep.getText());
 		mText.setTextSize(COMPLEX_UNIT_SP, 25);
 		mText.setGravity(CENTER);
 		mText.setLayoutParams(new LayoutParams(MATCH_PARENT, WRAP_CONTENT));
 		mView.addView(mText);
 
-		mImage = new ImageView(context);
+		mImage = new ImageView(getActivity().getBaseContext());
 		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
+		mImage.setPadding(0, 0, 0, px2Dp(getActivity(), 15));
 		
 		/**
 		 * TODO: The sample size should be setable with the advanced options in the companion app.
@@ -55,26 +69,15 @@ public class StepLayout extends Fragment implements Viewable {
 		final BitmapFactory.Options options = new BitmapFactory.Options();
 		options.inSampleSize = 4;
 		
-		final Bitmap bitmap  = BitmapFactory.decodeFile(step.getImagePath(), options);
+		final Bitmap bitmap  = BitmapFactory.decodeFile(mStep.getImagePath(), options);
 		mImage.setImageBitmap(bitmap);
 		
 		mView.addView(mImage);
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-		mImage.setPadding(0, 0, 0, px2Dp(15));
 	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return getView();
-	}
-
-	@Override
-	public View getView() {
 		return mView;
 	}
 	
@@ -83,8 +86,7 @@ public class StepLayout extends Fragment implements Viewable {
 		return "Step = " + mStep;
 	}
 	
-	private int px2Dp(int dp) {
-		final Activity activity = getActivity();
+	private int px2Dp(final Activity activity, final int dp) {
 		final Resources resources = activity.getResources();
 		final DisplayMetrics displayMetrics = resources.getDisplayMetrics();
 	    final float scale = displayMetrics.density;

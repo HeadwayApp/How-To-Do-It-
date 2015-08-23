@@ -29,7 +29,7 @@ public class TaskSelectionActivity extends ListActivity {
 			intent.putExtra("TASK", ((TextView)v).getText());
 			startActivity(intent);
 		}else {
-			Toast.makeText(getBaseContext(), R.string.cant_start_task, Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), R.string.cant_start_task, Toast.LENGTH_LONG).show();
 		}
 	}
 

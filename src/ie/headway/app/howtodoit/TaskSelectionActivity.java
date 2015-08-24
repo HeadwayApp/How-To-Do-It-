@@ -1,6 +1,7 @@
 package ie.headway.app.howtodoit;
 
-import static ie.headway.app.howtodoit.disk.AppDir.ROOT;
+import static ie.headway.app.disk.AppDir.ROOT;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;

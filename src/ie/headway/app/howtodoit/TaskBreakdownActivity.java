@@ -1,6 +1,6 @@
 package ie.headway.app.howtodoit;
 
-import static ie.headway.app.howtodoit.disk.AppDir.ROOT;
+import static ie.headway.app.disk.AppDir.ROOT;
 
 import java.io.File;
 

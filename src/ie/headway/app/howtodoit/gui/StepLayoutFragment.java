@@ -19,8 +19,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import ie.headway.app.xml.Step;
 import android.widget.TextView;
+import ie.headway.app.xml.Step;
 
 public class StepLayoutFragment extends Fragment {
 

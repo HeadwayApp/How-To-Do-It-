@@ -6,4 +6,4 @@
     android:gravity="center"
     android:layout_marginTop="25dp"
     android:layout_marginBottom="25dp"
-    android:orientation="vertical" /><!-- From: file:/C:/Users/Moses/StudioProjects/How-To-Do-It/app/src/main/res/layout/task_list_item.xml -->
+    android:orientation="vertical" /><!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/src/main/res/layout/task_list_item.xml -->

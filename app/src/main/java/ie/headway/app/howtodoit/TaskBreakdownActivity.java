@@ -72,7 +72,7 @@ public class TaskBreakdownActivity extends FragmentActivity {
          * */
         @Override
         public int getCount() {
-            return new File(taskDir, "imgs").list().length - 1;
+            return new File(taskDir, "imgs").list().length;
         }
     }
 

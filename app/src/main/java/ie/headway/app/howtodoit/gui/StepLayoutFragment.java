@@ -58,7 +58,7 @@ public class StepLayoutFragment extends Fragment {
 		mView.addView(mText);
 
 		mImage = new ImageView(getActivity().getBaseContext());
-		mImage.setLayoutParams(new LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
+		mImage.setLayoutParams(new LayoutParams(MATCH_PARENT, MATCH_PARENT));
 		mImage.setPadding(0, 0, 0, px2Dp(getActivity(), 15));
 		
 		/**

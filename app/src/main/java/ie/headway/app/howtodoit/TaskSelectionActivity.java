@@ -4,7 +4,6 @@ import static ie.headway.app.disk.AppDir.ROOT;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class TaskSelectionActivity extends ListActivity {
 
@@ -23,9 +21,7 @@ public class TaskSelectionActivity extends ListActivity {
 		final ArrayAdapter<String> adapter = 
 				new ArrayAdapter<String>(getBaseContext(), R.layout.task_list_item);
 		final File rootFile = ROOT.getFile();
-		Log.w("mo", "root file is " + rootFile);
 		final String[] fileNameLst = rootFile.list();
-		Log.i("mo", "list = " + Arrays.toString(fileNameLst));
 		adapter.addAll(fileNameLst);
 		setListAdapter(adapter);
 	}

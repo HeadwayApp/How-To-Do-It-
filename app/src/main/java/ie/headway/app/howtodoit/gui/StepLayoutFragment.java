@@ -1,11 +1,5 @@
 package ie.headway.app.howtodoit.gui;
 
-import static android.util.TypedValue.COMPLEX_UNIT_SP;
-import static android.view.Gravity.CENTER;
-import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-import static android.widget.LinearLayout.VERTICAL;
-
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -20,7 +14,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+
 import ie.headway.app.xml.Step;
+
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
+import static android.view.Gravity.CENTER;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+import static android.widget.LinearLayout.VERTICAL;
 
 public class StepLayoutFragment extends Fragment {
 
@@ -67,7 +68,7 @@ public class StepLayoutFragment extends Fragment {
 		 * set to.
 		 * */
 		final BitmapFactory.Options options = new BitmapFactory.Options();
-		options.inSampleSize = 4;
+		options.inSampleSize = 1;
 		
 		final Bitmap bitmap  = BitmapFactory.decodeFile(mStep.getImagePath(), options);
 		mImage.setImageBitmap(bitmap);

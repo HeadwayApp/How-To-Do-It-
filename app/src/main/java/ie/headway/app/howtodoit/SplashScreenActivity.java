@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 
 import ie.headway.app.HeadwaySplashScreenActivity;
-import ie.headway.app.disk.AppDir;
 
 public class SplashScreenActivity extends HeadwaySplashScreenActivity {
 

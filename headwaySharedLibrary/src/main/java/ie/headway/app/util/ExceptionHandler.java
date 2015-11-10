@@ -1,4 +1,4 @@
-package ie.headway.app.howtodoit;
+package ie.headway.app.util;
 
 import android.os.Environment;
 

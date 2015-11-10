@@ -3,32 +3,39 @@ package ie.headway.app;
 import android.app.Activity;
 import android.os.Bundle;
 
+import ie.headway.app.util.ExceptionHandler;
+
 import static ie.headway.app.disk.AppDir.makeAppDirs;
 
 public abstract class HeadwaySplashScreenActivity extends Activity {
 
+  private static long SPLASH_SCREEN_TIMEOUT = 5000L;
+
 	@Override
 	public void onCreate(final Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler());
+		fixBackStack();
+		setContentView(R.layout.activity_splash_screen);
+		makeAppDirs();
+		exitSplashScreen(SPLASH_SCREEN_TIMEOUT);
+	}
 
+	/**
+	 * This method is used to circumvent a bug which has existed in Android since API 1 whereby the
+   * app appears to restart when it should resume,
+   * see: http://stackoverflow.com/questions/18449541/android-application-restarts-when-opened-by-clicking-the-application-icon
+   * for more information.
+	 * */
+	private void fixBackStack() {
 		if (!isTaskRoot()) {
 			finish();
 			return;
 		}
-
-		setContentView(R.layout.activity_splash_screen);
-		makeAppDirs();	//NOTE  Having this across both apps may cause problems, keep that in mind.
-		exitSplashScreen(5000);
 	}
 	
 	/**
-	 * TODO Inspect this method to see if it can be improved,
-	 * or if a more efficient approach can be taken. This code
-	 * was copy-pasta from stackOverflow and I don't know how it works.
-	 * 
-	 * Override this method to decide what will happen after the SplashScreen executes.
-	 * 
-	 * TODO ^^^Improve this javadoc, give better explanation.^^^
+	 * This method is called at the end of HeadwaySplashScreenActivity
 	 * */
 	protected abstract void exitSplashScreen(final long delay);
 

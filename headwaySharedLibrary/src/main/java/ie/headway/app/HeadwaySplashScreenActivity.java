@@ -2,6 +2,7 @@ package ie.headway.app;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 
 import ie.headway.app.util.ExceptionHandler;
 
@@ -33,9 +34,23 @@ public abstract class HeadwaySplashScreenActivity extends Activity {
 			return;
 		}
 	}
+
+  /**
+   * Run the {@code runnable} on the main thread after {@code delay} milliseconds.
+   *
+   * @param runnable The runnable to run.
+   * @param delay The amount of time in milliseconds which should elapse before running the runnable.
+   * */
+  protected void runAfterDelay(final Runnable runnable, final long delay) {
+    final Handler handler = new Handler();
+    handler.postDelayed(runnable, delay);
+  }
 	
 	/**
-	 * This method is called at the end of HeadwaySplashScreenActivity
+	 * This method is called at the end of HeadwaySplashScreenActivity's onCreate(), subclasses should
+   * override this method in order to decide what to do after the splash screen has displayed.
+   *
+   * @param delay The amount of time in milliseconds which should elapse before exiting the splash screen.
 	 * */
 	protected abstract void exitSplashScreen(final long delay);
 

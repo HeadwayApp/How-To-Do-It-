@@ -1,6 +1,5 @@
 package ie.headway.app.howtodoit;
 
-import static ie.headway.app.disk.AppDir.ROOT;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,16 +11,17 @@ import android.widget.Toast;
 
 import java.io.File;
 
+import static ie.headway.app.disk.AppDir.ROOT;
+
 public class TaskSelectionActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_task_selection);
-		final ArrayAdapter<String> adapter = 
-				new ArrayAdapter<String>(getBaseContext(), R.layout.task_list_item);
+		final ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.task_list_item);
 		final File rootFile = ROOT.getFile();
-		final String[] fileNameLst = rootFile.list();
+		final String[] fileNameLst = rootFile.list(new HiddenFileNameFilter());
 		adapter.addAll(fileNameLst);
 		setListAdapter(adapter);
 	}

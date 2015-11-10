@@ -1,0 +1,83 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:1:1-27:12
+	xmlns:android
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:1:11-69
+	package
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:2:5-39
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:4:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:5:22-78
+application
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:7:5-25:19
+MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
+MERGED from [How-To-Do-It-:headwaySharedLibrary:unspecified] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/AndroidManifest.xml:11:5-16:19
+MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:7:45-77
+	android:allowBackup
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:7:18-44
+	android:icon
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:8:9-43
+	android:theme
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:8:44-75
+category#android.intent.category.LAUNCHER
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:9:9-69
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:9:19-66
+activity#ie.headway.app.howtodoit.SplashScreenActivity
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:10:9-17:20
+	android:label
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:12:13-45
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:11:13-49
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:13:13-16:29
+action#android.intent.action.MAIN
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:14:25-66
+activity#ie.headway.app.howtodoit.TaskSelectionActivity
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:18:9-20:48
+	android:label
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:19:13-50
+activity#ie.headway.app.howtodoit.TaskBreakdownActivity
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:21:9-23:48
+	android:label
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:23:13-45
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:22:13-50
+service#ie.headway.app.howtodoit.audio.TaskAudioPlayer
+ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:24:9-57
+	android:name
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:24:18-55
+uses-sdk
+INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
+MERGED from [How-To-Do-It-:headwaySharedLibrary:unspecified] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml
+		INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml

@@ -11,16 +11,11 @@ import android.os.Environment;
  * differs between Android devices, therefore the literal value returned by this method will not always
  * work if written to XML and used by another device, therefore when a portable step is serialized to XML
  * the portion of any path which corresponds to {@link Environment#getExternalStorageDirectory()} is automatically replaced
- * with the string defined in {@link #EXT_STRG_ARTEFACT}, and equally so when the step is deserialised on
- * another device {@link #EXT_STRG_ARTEFACT} is replaced with the value returned from {@link Environment#getExternalStorageDirectory()}
+ * with the string defined in {@link Artefact#EXT_STRG}, and equally so when the step is deserialised on
+ * another device {@link Artefact#EXT_STRG} is replaced with the value returned from {@link Environment#getExternalStorageDirectory()}
  * when it is being used at runtime.
  * */
 public class PortableStep extends Step {
-
-  /**
-   * This constant represents the value returned by {@link Environment#getExternalStorageDirectory()}
-   */
-  public static final String EXT_STRG_ARTEFACT = "EXTERNAL_STORAGE_DIRECTORY";
 
   public PortableStep() {
   }

@@ -56,12 +56,12 @@ ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest
 		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:20:13-45
 	android:name
 		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:19:13-50
-activity#ie.headway.app.howtodoit.TaskBreakdownActivity
+activity#ie.headway.app.howtodoit.TaskActivity
 ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:21:9-23:48
 	android:label
 		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:22:13-50
+		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:22:13-41
 service#ie.headway.app.howtodoit.audio.TaskAudioPlayer
 ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:24:9-57
 	android:name

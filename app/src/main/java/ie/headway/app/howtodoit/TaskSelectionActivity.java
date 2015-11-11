@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FilenameFilter;
 
 import ie.headway.app.util.AppDir;
 import ie.headway.app.util.HiddenFileNameFilter;
@@ -27,7 +28,7 @@ public class TaskSelectionActivity extends ListActivity {
 
 	@Override
 	protected void onListItemClick (final ListView l, final View v, final int pos, final long id) {
-		final Intent intent = new Intent(getApplicationContext(), TaskBreakdownActivity.class);
+		final Intent intent = new Intent(getApplicationContext(), TaskActivity.class);
 		if(v instanceof TextView) {
 			intent.putExtra("task", ((TextView)v).getText());
 			startActivity(intent);
@@ -38,8 +39,9 @@ public class TaskSelectionActivity extends ListActivity {
 
 	private ListAdapter getAdapter() {
 		final ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.task_list_item);
-		final File rootFile = AppDir.ROOT.getFile();
-		final String[] fileNameLst = rootFile.list(new HiddenFileNameFilter());
+		final File rootDir = AppDir.ROOT.getFile();
+		final FilenameFilter hiddenFileFilter = new HiddenFileNameFilter();
+		final String[] fileNameLst = rootDir.list(hiddenFileFilter);
 		adapter.addAll(fileNameLst);
 		return adapter;
 	}

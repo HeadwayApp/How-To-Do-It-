@@ -1644,7 +1644,6 @@ containing a value of this type.
         public static final int never=0x7f0c001e;
         public static final int none=0x7f0c000e;
         public static final int normal=0x7f0c000a;
-        public static final int pager=0x7f0c0051;
         public static final int parentPanel=0x7f0c002d;
         public static final int progress_circular=0x7f0c0005;
         public static final int progress_horizontal=0x7f0c0006;
@@ -1679,6 +1678,7 @@ containing a value of this type.
         public static final int step_layout_text_view=0x7f0c005f;
         public static final int submit_area=0x7f0c004c;
         public static final int tabMode=0x7f0c000b;
+        public static final int task_pager=0x7f0c0051;
         public static final int text=0x7f0c005c;
         public static final int text2=0x7f0c005a;
         public static final int textSpacerNoButtons=0x7f0c0034;

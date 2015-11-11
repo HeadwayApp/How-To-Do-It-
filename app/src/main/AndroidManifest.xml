@@ -19,7 +19,7 @@
             android:name=".TaskSelectionActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".TaskBreakdownActivity"
+            android:name=".TaskActivity"
             android:label="@string/app_name" />
         <service android:name=".audio.TaskAudioPlayer"/>
     </application>

@@ -9,11 +9,11 @@ import ie.headway.app.xml.Task;
 import ie.headway.app.xml.TaskNotFoundException;
 import ie.headway.app.xml.TaskPersister;
 
-public class TaskBreakdownAdapter extends FragmentStatePagerAdapter {
+public class TaskPagerAdapter extends FragmentStatePagerAdapter {
 
   final Task mTask;
 
-  public TaskBreakdownAdapter(final FragmentManager fm, final Intent intent) {
+  public TaskPagerAdapter(final FragmentManager fm, final Intent intent) {
     super(fm);
     mTask = retrieveTask(intent);
   }

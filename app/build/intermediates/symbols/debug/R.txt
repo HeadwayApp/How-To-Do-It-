@@ -490,7 +490,6 @@ int id multiply 0x7f0c0013
 int id never 0x7f0c001e
 int id none 0x7f0c000e
 int id normal 0x7f0c000a
-int id pager 0x7f0c0051
 int id parentPanel 0x7f0c002d
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
@@ -525,6 +524,7 @@ int id step_layout_image_view 0x7f0c0060
 int id step_layout_text_view 0x7f0c005f
 int id submit_area 0x7f0c004c
 int id tabMode 0x7f0c000b
+int id task_pager 0x7f0c0051
 int id text 0x7f0c005c
 int id text2 0x7f0c005a
 int id textSpacerNoButtons 0x7f0c0034

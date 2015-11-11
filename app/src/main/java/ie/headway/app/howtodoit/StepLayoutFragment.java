@@ -1,4 +1,4 @@
-package ie.headway.app.howtodoit.gui;
+package ie.headway.app.howtodoit;
 
 import android.app.Activity;
 import android.content.res.Resources;

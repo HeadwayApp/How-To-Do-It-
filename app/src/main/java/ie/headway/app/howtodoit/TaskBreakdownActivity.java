@@ -14,7 +14,6 @@ import org.simpleframework.xml.core.Persister;
 
 import java.io.File;
 
-import ie.headway.app.howtodoit.gui.StepLayoutFragment;
 import ie.headway.app.xml.Task;
 
 import static ie.headway.app.util.AppDir.ROOT;

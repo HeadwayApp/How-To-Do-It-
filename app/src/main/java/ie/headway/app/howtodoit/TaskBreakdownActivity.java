@@ -37,36 +37,4 @@ public class TaskBreakdownActivity extends FragmentActivity {
         startActivity(new Intent(this, TaskSelectionActivity.class));
     }
 
-    private class TaskBreakdownAdapter extends FragmentStatePagerAdapter {
-    	
-    	final File taskDir = ROOT.getFile(getIntent().getCharSequenceExtra("TASK"));
-    	final File taskFile = new File(taskDir, "task.xml");
-    	
-        public TaskBreakdownAdapter(final FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(final int position) {
-    		final Serializer serializer = new Persister();
-    
-    		Task makeTeaTask;
-    		try {
-    			makeTeaTask = serializer.read(Task.class, taskFile);
-    		}catch(Exception e) {
-    			throw new RuntimeException("Deserialization failed!", e);
-    		}
-    		
-    		return StepLayoutFragment.newInstance(makeTeaTask.getStep(position));
-        }
-
-        /**
-         * TODO This can cause crashes if there are unused images in the imgs directory.
-         * */
-        @Override
-        public int getCount() {
-            return new File(taskDir, "imgs").list().length;
-        }
-    }
-
 }

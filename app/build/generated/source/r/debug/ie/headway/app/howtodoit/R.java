@@ -1675,6 +1675,8 @@ containing a value of this type.
         public static final int src_in=0x7f0c0016;
         public static final int src_over=0x7f0c0017;
         public static final int status_bar_latest_event_content=0x7f0c0054;
+        public static final int step_layout_image_view=0x7f0c0060;
+        public static final int step_layout_text_view=0x7f0c005f;
         public static final int submit_area=0x7f0c004c;
         public static final int tabMode=0x7f0c000b;
         public static final int text=0x7f0c005c;
@@ -1736,8 +1738,9 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f040024;
         public static final int select_dialog_multichoice_material=0x7f040025;
         public static final int select_dialog_singlechoice_material=0x7f040026;
-        public static final int support_simple_spinner_dropdown_item=0x7f040027;
-        public static final int task_list_item=0x7f040028;
+        public static final int step_layout_fragment=0x7f040027;
+        public static final int support_simple_spinner_dropdown_item=0x7f040028;
+        public static final int task_list_item=0x7f040029;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

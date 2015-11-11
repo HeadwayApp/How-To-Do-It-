@@ -29,7 +29,7 @@ public class TaskSelectionActivity extends ListActivity {
 	protected void onListItemClick (final ListView l, final View v, final int pos, final long id) {
 		final Intent intent = new Intent(getApplicationContext(), TaskBreakdownActivity.class);
 		if(v instanceof TextView) {
-			intent.putExtra("TASK", ((TextView)v).getText());
+			intent.putExtra("task", ((TextView)v).getText());
 			startActivity(intent);
 		}else {
 			Toast.makeText(getApplicationContext(), R.string.cant_start_task, Toast.LENGTH_LONG).show();

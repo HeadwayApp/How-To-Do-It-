@@ -601,7 +601,7 @@ public final class R {
 		public static final int select_dialog_item_material = 0x7f040024;
 		public static final int select_dialog_multichoice_material = 0x7f040025;
 		public static final int select_dialog_singlechoice_material = 0x7f040026;
-		public static final int support_simple_spinner_dropdown_item = 0x7f040027;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040028;
 	}
 	public static final class mipmap {
 		public static final int ic_launcher = 0x7f030000;

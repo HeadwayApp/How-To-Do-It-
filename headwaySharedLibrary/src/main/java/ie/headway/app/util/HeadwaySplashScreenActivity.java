@@ -15,7 +15,7 @@ public abstract class HeadwaySplashScreenActivity extends Activity {
 	@Override
 	public void onCreate(final Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);
-		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler());
+		Thread.setDefaultUncaughtExceptionHandler(new HeadwayExceptionHandler());
 		fixBackStack();
 		setContentView(R.layout.activity_splash_screen);
 		makeAppDirs();

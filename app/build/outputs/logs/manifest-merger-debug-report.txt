@@ -23,8 +23,6 @@ ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest
 		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:5:22-78
 application
 ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:7:5-25:19
-MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [How-To-Do-It-:headwaySharedLibrary:unspecified] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/AndroidManifest.xml:11:5-16:19
 MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:22:5-20
@@ -70,8 +68,6 @@ ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest
 		ADDED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml:24:18-55
 uses-sdk
 INJECTED from /home/puter/StudioProjects/How-To-Do-It-/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43
 MERGED from [How-To-Do-It-:headwaySharedLibrary:unspecified] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.0] /home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/AndroidManifest.xml:20:5-43

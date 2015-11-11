@@ -1,6 +1,5 @@
 package ie.headway.app.util;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -8,7 +7,7 @@ import ie.headway.app.R;
 
 import static ie.headway.app.util.AppDir.makeAppDirs;
 
-public abstract class HeadwaySplashScreenActivity extends Activity {
+public abstract class HeadwaySplashScreenActivity extends HeadwayActivity {
 
   private static long SPLASH_SCREEN_TIMEOUT = 5000L;
 

@@ -23,7 +23,7 @@ public enum AppDir {
 
   /**
    * A directory available for the temporary storage of files.
-   * This directory is emptied every time {@link ie.headway.app.util.HeadwayActivity#onCreate(Bundle)}
+   * This directory is emptied every time {@link HeadwayActivity#onCreate(Bundle)}
    * is called.
    * */
 	TMP(ROOT.getPath(".tmp")) {

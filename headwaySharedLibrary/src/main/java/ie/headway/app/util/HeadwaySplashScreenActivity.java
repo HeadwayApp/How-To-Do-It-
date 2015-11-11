@@ -7,6 +7,9 @@ import ie.headway.app.R;
 
 import static ie.headway.app.util.AppDir.makeAppDirs;
 
+/**
+ * Activity which should be displayed as the first activity of any Headway app.
+ * */
 public abstract class HeadwaySplashScreenActivity extends HeadwayActivity {
 
   private static long SPLASH_SCREEN_TIMEOUT = 5000L;

@@ -1,12 +1,12 @@
-package ie.headway.app;
+package ie.headway.app.util;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 
-import ie.headway.app.util.ExceptionHandler;
+import ie.headway.app.R;
 
-import static ie.headway.app.disk.AppDir.makeAppDirs;
+import static ie.headway.app.util.AppDir.makeAppDirs;
 
 public abstract class HeadwaySplashScreenActivity extends Activity {
 
@@ -31,7 +31,6 @@ public abstract class HeadwaySplashScreenActivity extends Activity {
 	private void fixBackStack() {
 		if (!isTaskRoot()) {
 			finish();
-			return;
 		}
 	}
 

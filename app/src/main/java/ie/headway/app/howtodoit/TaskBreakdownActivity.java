@@ -17,7 +17,7 @@ import java.io.File;
 import ie.headway.app.howtodoit.gui.StepLayoutFragment;
 import ie.headway.app.xml.Task;
 
-import static ie.headway.app.disk.AppDir.ROOT;
+import static ie.headway.app.util.AppDir.ROOT;
 
 public class TaskBreakdownActivity extends FragmentActivity {
     

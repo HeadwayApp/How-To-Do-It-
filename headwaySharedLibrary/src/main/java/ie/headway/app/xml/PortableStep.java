@@ -2,8 +2,6 @@ package ie.headway.app.xml;
 
 import android.os.Environment;
 
-import java.io.File;
-
 /**
  * A {@link Step} which can be serialised/deserialised across different Android devices by use of
  * "artefacts", whereby certain non portable components of the data contained within the step is automatically
@@ -20,7 +18,7 @@ import java.io.File;
 public class PortableStep extends Step {
 
   /**
-   * This constant represents the system dependant path element which PortableStep will resolve.
+   * This constant represents the value returned by {@link Environment#getExternalStorageDirectory()}
    */
   public static final String EXT_STRG_ARTEFACT = "EXTERNAL_STORAGE_DIRECTORY";
 
@@ -28,7 +26,7 @@ public class PortableStep extends Step {
   }
 
   public PortableStep(String text, String imagePath, String audioPath) {
-    super(text, artifisePath(imagePath), artifisePath(audioPath));
+    super(text, artefisePath(imagePath), artefisePath(audioPath));
   }
 
   @Override
@@ -43,16 +41,28 @@ public class PortableStep extends Step {
     return normalisePath(artifisedPath);
   }
 
-  private static String artifisePath(final String normalisedPath) {
-    final File extStorage = Environment.getExternalStorageDirectory();
-    final String extStoragePath = extStorage.getAbsolutePath();
-    return normalisedPath.replace(extStoragePath, EXT_STRG_ARTEFACT);
+  /**
+   * Replace any part of the path which corresponds to an {@link Artefact} with that artefact.
+   * */
+  private static String artefisePath(final String normalisedPath) {
+    String arteficationBuffer = normalisedPath;
+    for(Artefact artefact: Artefact.values()) {
+      arteficationBuffer = artefact.artefisePath(arteficationBuffer);
+    }
+
+    return arteficationBuffer;
   }
 
+  /**
+   * Replace any artefact in the path with the appropriate value.
+   * */
   private static String normalisePath(final String artifisedPath) {
-    final File extStorage = Environment.getExternalStorageDirectory();
-    final String extStoragePath = extStorage.getAbsolutePath();
-    return artifisedPath.replace(EXT_STRG_ARTEFACT, extStoragePath);
+    String normalisationBuffer = artifisedPath;
+    for(Artefact artefact: Artefact.values()) {
+      normalisationBuffer = artefact.normalisePath(normalisationBuffer);
+    }
+
+    return normalisationBuffer;
   }
 
 }

@@ -12,4 +12,4 @@
 		android:layout_gravity="center"
 		android:contentDescription="@string/splash_content_description" />
 	
-</FrameLayout><!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/headwaySharedLibrary/src/main/res/layout/activity_splash_screen.xml --><!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/res/layout/activity_splash_screen.xml -->
+</FrameLayout><!-- From: file:/home/puter/StudioProjects/headwaySharedLibrary/src/main/res/layout/activity_splash_screen.xml --><!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/res/layout/activity_splash_screen.xml -->

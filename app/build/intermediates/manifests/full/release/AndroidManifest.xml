@@ -31,7 +31,7 @@
             android:name="ie.headway.app.howtodoit.TaskSelectionActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="ie.headway.app.howtodoit.TaskBreakdownActivity"
+            android:name="ie.headway.app.howtodoit.TaskActivity"
             android:label="@string/app_name" />
 
         <service android:name="ie.headway.app.howtodoit.audio.TaskAudioPlayer" />

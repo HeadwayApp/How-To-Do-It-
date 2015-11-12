@@ -1,6 +1,9 @@
 package ie.headway.app.howtodoit;
 
 import android.content.Intent;
+/**
+ * TODO: Using support library is not necessary. Use up to date api.
+ * */
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -30,10 +33,10 @@ public class TaskPagerAdapter extends FragmentStatePagerAdapter {
 
   private Task retrieveTask(final Intent intent) {
     final String taskName = intent.getCharSequenceExtra("task").toString();
-    final TaskPersister taskDeserialiser = new TaskPersister();
+    final TaskPersister taskDeserialiser = new TaskPersister(taskName);
 
     try {
-      return taskDeserialiser.read(taskName);
+      return taskDeserialiser.read();
     } catch (TaskNotFoundException e) {
       throw new RuntimeException("task persister couldn't read task " + taskName, e);
     }

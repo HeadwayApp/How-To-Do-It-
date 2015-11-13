@@ -3,6 +3,8 @@ package ie.headway.app.howtodoit;
 import android.content.Intent;
 /**
  * TODO: Using support library is not necessary. Use up to date api.
+ *
+ * TODO: Shouldn't be paging through fragments at all! Very inefficient, should extend a parent on CreateStepView.
  * */
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

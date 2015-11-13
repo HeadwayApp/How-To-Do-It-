@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="55a15bd3303eaaf2a359c2d0618234e3ce61a0b1">
+        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/classes-1c263d33ed610e4779c73ff1e32dc9ac8a9d63ca.jar" />
+    </item>
+
+</items>

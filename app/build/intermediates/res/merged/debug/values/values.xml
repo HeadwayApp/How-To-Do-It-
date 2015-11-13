@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -41,7 +41,7 @@
     <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <color name="headway_blue">#0099D2</color>
-    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -221,7 +221,7 @@
     <string name="cant_start_task">This task can\'t be displayed.</string>
     <string name="no_data">No Tasks</string>
     <string name="splash_content_description">Splash Screen</string>
-    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -233,7 +233,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
+    <!-- From: file:/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

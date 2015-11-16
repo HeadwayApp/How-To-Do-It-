@@ -2,11 +2,39 @@
 <items version="2" >
 
     <item
+        jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/classes-91b8ac86fc554e901e3ce21d9717b3b0719cfa65.jar" />
+    </item>
+    <item
+        jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-48e7ab663decd6e808b1b155217064c0373cd738.jar" />
+    </item>
+    <item
         jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="55a15bd3303eaaf2a359c2d0618234e3ce61a0b1">
+        sha1="cc19f38c62446614246ef78ebf329f2d9fa363e6">
         <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/classes-1c263d33ed610e4779c73ff1e32dc9ac8a9d63ca.jar" />
+    </item>
+    <item
+        jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/classes-091fc4ad9604618d44b978bd0f690eb8ee5f633a.jar" />
+    </item>
+    <item
+        jar="/home/puter/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-3e4d066db4c45bcd2917d91993d11d2300a613bf.jar" />
     </item>
 
 </items>

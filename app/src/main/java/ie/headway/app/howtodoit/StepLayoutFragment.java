@@ -52,16 +52,12 @@ public class StepLayoutFragment extends Fragment {
 	}
 
   @Override
-  public void setUserVisibleHint(boolean isVisibleToUser) {
+  public void setUserVisibleHint(final boolean isVisibleToUser) {
     super.setUserVisibleHint(isVisibleToUser);
     if (isVisibleToUser) {
       startAudioClip();
     }else {
-      try{
-        stopAudioClip();
-      }catch(Throwable t) {
-
-      }
+      stopAudioClip();
     }
   }
 
@@ -101,7 +97,7 @@ public class StepLayoutFragment extends Fragment {
   }
 
   private void stopAudioClip() {
-    mAudioPlayer.release();
+    if(mAudioPlayer != null) mAudioPlayer.release();
     mAudioPlayer = null;
   }
 

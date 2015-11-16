@@ -5,15 +5,8 @@
         jar="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/exploded-aar/How-To-Do-It-/headwaySharedLibrary/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="9f1f0cc98e80f1c32a343ffcf5e9f6fefeb0aa14">
+        sha1="1a832140c0dd91a32977cfa370faca805ee118e1">
         <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/classes-1c263d33ed610e4779c73ff1e32dc9ac8a9d63ca.jar" />
-    </item>
-    <item
-        jar="/home/puter/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/home/puter/StudioProjects/How-To-Do-It-/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-7bd1f67bf03789a223ce26d84c6924ac237cc6e0.jar" />
     </item>
 
 </items>

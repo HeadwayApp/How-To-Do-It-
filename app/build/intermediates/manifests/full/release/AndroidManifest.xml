@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ie.headway.app.howtodoit"
-    android:versionCode="2"
+    package="ie.headway.app.how_to_do_it"
+    android:versionCode="3"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -19,7 +19,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
 
         <activity
-            android:name="ie.headway.app.howtodoit.SplashScreenActivity"
+            android:name="ie.headway.app.how_to_do_it.SplashScreenActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ie.headway.app.howtodoit.TaskSelectionActivity"
+            android:name="ie.headway.app.how_to_do_it.TaskSelectionActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="ie.headway.app.howtodoit.TaskActivity"
+            android:name="ie.headway.app.how_to_do_it.TaskActivity"
             android:label="@string/app_name" />
 
-        <service android:name="ie.headway.app.howtodoit.audio.TaskAudioPlayer" />
+        <service android:name="ie.headway.app.how_to_do_it.audio.TaskAudioPlayer" />
     </application>
 
 </manifest>

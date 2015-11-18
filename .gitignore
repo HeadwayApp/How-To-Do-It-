@@ -5,3 +5,4 @@ app/build/
 build/
 gradle.properties
 local.properties
+*.iml

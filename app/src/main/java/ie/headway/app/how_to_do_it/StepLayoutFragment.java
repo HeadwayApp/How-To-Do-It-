@@ -26,7 +26,7 @@ public class StepLayoutFragment extends Fragment {
   @Bind(R.id.step_layout_text_view) TextView mStepTextView;
   @Bind(R.id.step_layout_image_view) ImageView mImageView;
 
-	public static final StepLayoutFragment newInstance(Step step) {
+	public static final StepLayoutFragment newInstance(final Step step) {
 		final StepLayoutFragment stepLayoutFragment = new StepLayoutFragment();
 		final Bundle argsBundle = new Bundle(1);
 		argsBundle.putParcelable("step", step);

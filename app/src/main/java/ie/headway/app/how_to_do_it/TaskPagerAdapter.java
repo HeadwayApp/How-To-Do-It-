@@ -1,18 +1,19 @@
 package ie.headway.app.how_to_do_it;
 
 import android.content.Intent;
-/**
- * TODO: Using support library is not necessary. Use up to date api.
- *
- * TODO: Shouldn't be paging through fragments at all! Very inefficient, should extend a parent on CreateStepView.
- * */
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import ie.headway.app.xml.Task;
-import ie.headway.app.xml.TaskNotFoundException;
-import ie.headway.app.xml.TaskPersister;
+import ie.headway.app.xml.task.Task;
+import ie.headway.app.xml.task.TaskNotFoundException;
+import ie.headway.app.xml.task.TaskPersister;
+
+/**
+ * TODO: Using support library is not necessary. Use up to date api.
+ * <p/>
+ * TODO: Shouldn't be paging through fragments at all! Very inefficient, should extend a parent on CreateStepView.
+ */
 
 public class TaskPagerAdapter extends FragmentStatePagerAdapter {
 

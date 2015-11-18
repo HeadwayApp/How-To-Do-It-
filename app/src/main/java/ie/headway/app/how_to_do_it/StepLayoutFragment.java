@@ -16,7 +16,7 @@ import java.io.IOException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import ie.headway.app.xml.Step;
+import ie.headway.app.xml.step.Step;
 
 public class StepLayoutFragment extends Fragment {
 

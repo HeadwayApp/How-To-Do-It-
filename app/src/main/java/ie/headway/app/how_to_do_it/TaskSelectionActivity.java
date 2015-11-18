@@ -15,6 +15,7 @@ import java.io.FilenameFilter;
 
 import ie.headway.app.util.AppDir;
 import ie.headway.app.util.HiddenFileNameFilter;
+import ie.headway.app.xml.task.Task;
 
 public class TaskSelectionActivity extends ListActivity {
 
@@ -22,16 +23,28 @@ public class TaskSelectionActivity extends ListActivity {
 	protected void onCreate(final Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_task_selection);
-		final ListAdapter adapter = getAdapter();
-		setListAdapter(adapter);
 	}
+
+	@Override
+  protected void onResume() {
+    super.onResume();
+    final ListAdapter adapter = getAdapter();
+    setListAdapter(adapter);
+  }
 
 	@Override
 	protected void onListItemClick (final ListView l, final View v, final int pos, final long id) {
 		final Intent intent = new Intent(getApplicationContext(), TaskActivity.class);
 		if(v instanceof TextView) {
-			intent.putExtra("task", ((TextView)v).getText());
-			startActivity(intent);
+      final String taskName = ((TextView)v).getText().toString();
+      final Task task = new Task(taskName, null);
+      if(task.doesTaskExist()) {
+        intent.putExtra("task", taskName);
+        startActivity(intent);
+      }else {
+        final Toast toast = Toast.makeText(this, "Not a valid task", Toast.LENGTH_LONG);
+        toast.show();
+      }
 		}else {
 			Toast.makeText(getApplicationContext(), R.string.cant_start_task, Toast.LENGTH_LONG).show();
 		}

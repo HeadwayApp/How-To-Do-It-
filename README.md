@@ -1,2 +1,2 @@
-# How-To-Do-It-
-A task breakdown app for ABI survivors.
+# Deprecated
+go to https://github.com/abuicke/Headway
